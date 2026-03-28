@@ -39,12 +39,10 @@ function Tabbed({ content }) {
       </div>
 
       {activeTab <= 2 ? (
-        <TabContent item={content.at(activeTab)} key={content.at(activeTab).summary} />
+        <TabContent item={content.at(activeTab)} key={content.at(activeTab).summary}/>
       ) : (
         <DifferentContent />
       )}
-
-
     </div>
   );
 }
@@ -53,14 +51,13 @@ function Tab({ num, activeTab, onClick }) {
   return (
     <button
       className={activeTab === num ? "tab active" : "tab"}
-      onClick={() => onClick(num)}
-    >
+      onClick={() => onClick(num)}>
       Tab {num + 1}
     </button>
   );
 }
 
-//  
+//
 
 function TabContent({ item }) {
   const [showDetails, setShowDetails] = useState(true);
